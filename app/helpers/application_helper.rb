@@ -4,7 +4,7 @@ module ApplicationHelper
     ['Air Nomads', 'air+nomads'],
     ['Earth Kingdom', 'earth+kingdom'],
     ['Fire Nation', 'fire+nation'],
-    ['Water Tribes', 'water+tribes'],
+    ['Water Tribes', 'water+tribe'],
   ]
   end
 end
