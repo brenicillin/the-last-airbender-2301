@@ -6,14 +6,22 @@
 
 <section id="members">
   <% @facade.members.each do |member| %>
-    <div class="member">
       <h3><%= member.name %></h3>
       <% if member.photo_url %>
         <img src= <%= member.photo_url %>>
       <% end %>
-      <p>Allies: <%= if member.allies == nil %> None <% else %> <%= member.allies %></p>
-      <p>Enemies: <%= if member.enemies == nil %> None <% else> <%= member.enemies %></p>
-      <p>Affiliation: <%= member.affiliation %></p>
-    </div>
+      <p>Allies: 
+        <% if member.allies.nil? %>
+          None 
+        <% else %>
+          <%= member.allies %> 
+        <% end %></p>
+      <p>Enemies: 
+        <% if member.enemies.nil? %>
+          None 
+        <% else %> 
+          <%= member.enemies %>
+        <% end %></p>
+      <p>Affiliations: <%= member.affiliation %></p>
   <% end %>
 </section> 
