@@ -7,14 +7,20 @@ RSpec.describe 'Search index page', type: :feature do
 
       select 'Fire Nation', from: :nation
       click_button 'Search For Members'
-      
+
       expect(current_path).to eq(search_path)
       within('#total-members') do
         expect(page).to have_content('Total Members: 97')
       end
 
       within ('#members') do
-        expect(page).to have_content("Name: Afiko")
+
+        expect(page).to have_content("Chan (Fire Nation admiral)")
+        expect(page).to have_content("Allies: Ozai")
+        expect(page).to have_content("Enemies: Earth Kingdom")
+        expect(page).to have_content("Affiliations: Fire Nation Navy")
+
+        expect(page).to have_content("Afiko")
         expect(page).to have_content("Allies: Fire Nation")
         expect(page).to have_content("Enemies: Aang")
         expect(page).to have_content("Affiliations: Fire Nation")
