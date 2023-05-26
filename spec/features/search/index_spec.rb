@@ -7,7 +7,7 @@ RSpec.describe 'Search index page', type: :feature do
 
       select 'Fire Nation', from: :nation
       click_button 'Search For Members'
-      save_and_open_page
+      
       expect(current_path).to eq(search_path)
       within('#total-members') do
         expect(page).to have_content('Total Members: 97')
