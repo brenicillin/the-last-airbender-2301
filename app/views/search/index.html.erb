@@ -1,0 +1,16 @@
+<h1>Search Results</h1>
+
+<section id="total-members">
+  <h2>Total Members: <%= @facade.total_members %></h2>
+</section>
+
+<section id="members">
+  <% @facade.members.each do |member| %>
+    <div class="member">
+      <h3><%= member.name %></h3>
+      <p>Allies: <%= member.allies %></p>
+      <p>Enemies: <%= member.enemies %></p>
+      <p>Affiliation: <%= member.affiliation %></p>
+    </div>
+  <% end %>
+</section> 
